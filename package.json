@@ -12,9 +12,9 @@
   "dependencies": {
     "@types/d3-force": "^3.0.10",
     "d3-force": "^3.0.0",
+    "force-graph": "^1.51.2",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
-    "react-force-graph": "^1.48.2",
     "zustand": "^5.0.11"
   },
   "devDependencies": {
