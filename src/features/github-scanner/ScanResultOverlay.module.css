@@ -1,0 +1,161 @@
+.overlay {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  width: 380px;
+  max-height: 60vh;
+  overflow-y: auto;
+  background: rgba(15, 23, 42, 0.96);
+  border: 1px solid #1e293b;
+  border-radius: 14px;
+  padding: 16px;
+  z-index: 15;
+  backdrop-filter: blur(12px);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #f1f5f9;
+  display: block;
+}
+
+.repoUrl {
+  font-size: 11px;
+  color: #64748b;
+  display: block;
+}
+
+.closeBtn {
+  background: none;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.closeBtn:hover { color: #f1f5f9; background: #1e293b; }
+
+.section { display: flex; flex-direction: column; gap: 8px; }
+
+.sectionTitle {
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.tagList { display: flex; flex-wrap: wrap; gap: 6px; }
+
+.techTag {
+  font-size: 12px;
+  background: #1e3a5f;
+  color: #7dd3fc;
+  border-radius: 6px;
+  padding: 3px 8px;
+}
+
+.filesNote {
+  font-size: 11px;
+  color: #475569;
+  margin: 0;
+}
+
+.proposalList { display: flex; flex-direction: column; gap: 8px; }
+
+.proposalCard {
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.proposalHeader {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.proposalLabel {
+  font-weight: 600;
+  color: #f1f5f9;
+  font-size: 13px;
+}
+
+.scopeBadge {
+  font-size: 10px;
+  border-radius: 4px;
+  padding: 1px 5px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.scopeBadge.major { background: #1e3a5f; color: #38bdf8; }
+.scopeBadge.niche { background: #2d1b69; color: #a78bfa; }
+
+.layerBadge {
+  font-size: 10px;
+  background: #0f172a;
+  color: #64748b;
+  border-radius: 4px;
+  padding: 1px 5px;
+  font-family: monospace;
+}
+
+.proposalDesc {
+  font-size: 12px;
+  color: #94a3b8;
+  margin: 0 0 6px;
+}
+
+.parentHint {
+  font-size: 11px;
+  color: #64748b;
+  margin: 0 0 8px;
+}
+
+.parentHint code {
+  background: #0f172a;
+  padding: 1px 4px;
+  border-radius: 3px;
+  color: #94a3b8;
+}
+
+.proposalActions { display: flex; gap: 6px; }
+
+.acceptBtn {
+  background: #14532d;
+  color: #4ade80;
+  border: none;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.acceptBtn:hover { background: #166534; }
+
+.rejectBtn {
+  background: #1e293b;
+  color: #64748b;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.rejectBtn:hover { color: #f87171; border-color: #f87171; }
