@@ -1,7 +1,6 @@
 import { useAppStore } from "./store/app-store";
 import { useGraphData } from "./features/ocean-graph/useGraphData";
-import { OceanGraph } from "./features/ocean-graph/OceanGraph";
-import { GraphLegend } from "./features/ocean-graph/GraphLegend";
+import { ZoneLayout } from "./features/zone-layout/ZoneLayout";
 import { LearningTreePanel } from "./features/learning-tree/LearningTreePanel";
 import { ScanResultOverlay } from "./features/github-scanner/ScanResultOverlay";
 import { AppShell } from "./components/AppShell";
@@ -45,8 +44,7 @@ export default function App() {
 
   return (
     <AppShell>
-      {graph && <OceanGraph graph={graph} />}
-      <GraphLegend />
+      {graph && <ZoneLayout graph={graph} />}
       <LearningTreePanel />
       <ScanResultOverlay />
     </AppShell>

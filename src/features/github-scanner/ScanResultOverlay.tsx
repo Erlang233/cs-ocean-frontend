@@ -1,5 +1,6 @@
 import { useAppStore } from "../../store/app-store";
 import { useScanner } from "./useScanner";
+import { useDeepScanner } from "./useDeepScanner";
 import type { NodeProposal } from "../../types/scan";
 import styles from "./ScanResultOverlay.module.css";
 
@@ -32,6 +33,7 @@ export function ScanResultOverlay() {
   const proposals = useAppStore((s) => s.proposals);
   const setScanResult = useAppStore((s) => s.setScanResult);
   const { accept, reject } = useScanner();
+  const { generatePlan, isLoading: isPlanLoading, error: planError } = useDeepScanner();
 
   if (!scanResult) return null;
 
@@ -57,6 +59,17 @@ export function ScanResultOverlay() {
           ))}
         </div>
         <p className={styles.filesNote}>Analyzed: {scanResult.files_analyzed.join(", ")}</p>
+      </div>
+
+      <div className={styles.section}>
+        <button
+          className={styles.deepScanBtn}
+          onClick={() => generatePlan(scanResult.repo_url)}
+          disabled={isPlanLoading}
+        >
+          {isPlanLoading ? "Generating learning plan…" : "Generate Learning Plan ↗"}
+        </button>
+        {planError && <p className={styles.deepScanError}>{planError}</p>}
       </div>
 
       {proposals.length > 0 && (

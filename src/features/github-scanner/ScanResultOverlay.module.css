@@ -159,3 +159,26 @@
 }
 
 .rejectBtn:hover { color: #f87171; border-color: #f87171; }
+
+.deepScanBtn {
+  width: 100%;
+  padding: 9px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s;
+  font-family: inherit;
+}
+
+.deepScanBtn:hover:not(:disabled) { opacity: 0.85; }
+.deepScanBtn:disabled { opacity: 0.5; cursor: wait; }
+
+.deepScanError {
+  font-size: 11px;
+  color: #f87171;
+  text-align: center;
+}

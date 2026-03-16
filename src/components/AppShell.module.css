@@ -6,6 +6,11 @@
   background: #0f172a;
 }
 
+.shell > main {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
 .header {
   position: fixed;
   top: 0;
